@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
   class Tads23 extends StatelessWidget {
   const Tads23({super.key});
 
-  var fontColor = Colors.amber;
-
   @override
   Widget build(BuildContext context) {
+    var fontColor = Color.fromARGB(255, 255, 255, 255);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Minha primeira página'),
+        title: const Text('Aula Tads 23'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Center(
@@ -28,7 +27,8 @@ import 'package:flutter/material.dart';
               ]),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Padding(
+          child: Stack(
+          children: <Widget>[],
           padding: const EdgeInsets.only(left: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -42,7 +42,7 @@ import 'package:flutter/material.dart';
                   color: fontColor,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 'Capitão',
                 style: TextStyle(
@@ -56,9 +56,27 @@ import 'package:flutter/material.dart';
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
-                  color: fontColor,
-                ),
+                  color: fontColor),
               ),
+              const SizedBox(height: 15),
+              Row(
+              children: <Widget>[
+                Icon(
+                  Icons.phone_callback,
+                  color: fontColor,
+              ),
+              const SizedBox(width: 5),
+              Text(
+                '+55 11 98456 5666',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: fontColor,
+              ),
+
+              ),
+              ],
+            )
             ],
           ),
         ),
